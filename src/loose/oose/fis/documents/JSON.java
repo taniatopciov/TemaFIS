@@ -9,17 +9,17 @@ public class JSON extends Document {
 
     @Override
     public String[] analizeaza() {
-        String[] res = new String[continut.length];
+        String[] rezultat = new String[continut.length];
         int      pos = 0;
 
         for (String cuvant : continut) {
             if (!cuvant.contains(":")) {
-                res[pos] = cuvant;
+                rezultat[pos] = cuvant;
                 pos++;
             }
         }
 
-        return Arrays.copyOf(res, pos);
+        return Arrays.copyOf(rezultat, pos);
     }
 
     @Override
